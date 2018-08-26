@@ -16,6 +16,7 @@ def main():
 
     # TODO: print the returned data headers
     print("Headers: ----------------------")
+    print(result.getheaders())
 
 
     # TODO: print the returned data itself
