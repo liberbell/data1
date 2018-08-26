@@ -21,6 +21,7 @@ def main():
 
     # TODO: print the returned data itself
     print("Returned data: ----------------------")
+    print(result.read())
 
 
 if __name__ == "__main__":
