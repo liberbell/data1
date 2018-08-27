@@ -3,6 +3,7 @@
 # TODO: import the request, error, and status modules
 import urllib.request
 from http import HTTPStatus
+from urllib.error import HTTPError
 
 
 def main():
@@ -11,10 +12,13 @@ def main():
     # url = "http://httpbin.org/html"         # should work with no errors
 
     # TODO: use exception handling to attempt the URL access
-    result = urllib.request.urlopen(url)
-    print("Result code: {0}".format(result.status))
-    if (result.getcode() == HTTPStatus.OK):
-        print(result.read().decode('utf-8'))
+    try:
+        result = urllib.request.urlopen(url)
+        print("Result code: {0}".format(result.status))
+        if (result.getcode() == HTTPStatus.OK):
+            print(result.read().decode('utf-8'))
+    except HTTPError as err:
+        print('Error: {0}'.format(err.code))
 
 if __name__ == "__main__":
     main()
