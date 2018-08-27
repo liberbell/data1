@@ -20,7 +20,7 @@ def main():
     except HTTPError as err:
         print('Error: {0}'.format(err.code))
     except URLError as err:
-        print('That server is bunk')
+        print('That server is bunk. {0}'.format(err.reason))
 
 if __name__ == "__main__":
     main()
