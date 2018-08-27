@@ -20,9 +20,12 @@ def main():
 
 
     # TODO: issue the request with the data params as part of the URL
-    result = urllib.request.urlopen(url + '?' + data)
+    # result = urllib.request.urlopen(url + '?' + data)
 
     # TODO: issue the request with a data parameter to use POST
+    url = 'http://httpbin.org/post'
+    data = data.encode()
+    result = urllib.request.urlopen(url, data=data)
 
     print("Result code: {0}".format(result.status))
     print("Returned data: ----------------------")
