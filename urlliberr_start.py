@@ -7,8 +7,8 @@ from urllib.error import HTTPError
 
 
 def main():
-    #url = "http://no-such-server.org"      # will generate a URLError
-    url = "http://httpbin.org/status/404"  # will generate an HTTPError
+    url = "http://no-such-server.org"      # will generate a URLError
+    # url = "http://httpbin.org/status/404"  # will generate an HTTPError
     # url = "http://httpbin.org/html"         # should work with no errors
 
     # TODO: use exception handling to attempt the URL access
