@@ -6,7 +6,8 @@ from requests import HTTPError, Timeout
 def main():
     # Use requests to issue a standard HTTP GET request
     try:
-        url = "http://httpbin.org/status/404"
+        # url = "http://httpbin.org/status/404"
+        url = "http://httpbin.org/delay/5"
         result = requests.get(url, timeout=2)
         result.raise_for_status()
         printResults(result)
