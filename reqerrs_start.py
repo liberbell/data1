@@ -1,17 +1,19 @@
 # using the requests library to access internet data
 
 import requests
-from requests import HTTPError
+from requests import HTTPError, Timeout
 
 def main():
     # Use requests to issue a standard HTTP GET request
     try:
         url = "http://httpbin.org/status/404"
-        result = requests.get(url)
+        result = requests.get(url, timeout=2)
         result.raise_for_status()
         printResults(result)
     except HTTPError as err:
         print('Error: {0}'.format(err))
+    except Timeout as err:
+        print('Request time out: {0}'.format(err))
 
 
 
