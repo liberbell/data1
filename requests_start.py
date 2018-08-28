@@ -11,12 +11,12 @@ def main():
 
     # TODO: Send some parameters to the URL via a GET request
     # Note that requests handles this for you, no manual encoding
-    url = 'http://httpbin.org/get'
+    url = 'http://httpbin.org/post'
     dataValues = {
         'keys1': 'value1',
         'keys2': 'value2'
     }
-    result = requests.get(url, params=dataValues)
+    result = requests.post(url, data=dataValues)
     printResults(result)
 
     # TODO: Pass a custom header to the server
