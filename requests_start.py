@@ -7,7 +7,7 @@ def main():
     # TODO: Use requests to issue a standard HTTP GET request
     url = 'http://httpbin.org/xml'
     result = requests.get(url)
-    printResults(result)
+    # printResults(result)
 
     # TODO: Send some parameters to the URL via a GET request
     # Note that requests handles this for you, no manual encoding
