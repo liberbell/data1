@@ -17,7 +17,7 @@ def main():
         'keys2': 'value2'
     }
     result = requests.post(url, data=dataValues)
-    printResults(result)
+    # printResults(result)
 
     # TODO: Pass a custom header to the server
     url = 'http://httpbin.org/get'
