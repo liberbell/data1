@@ -14,7 +14,7 @@ def main():
     url = 'http://httpbin.org/get'
     dataValues = {
         'keys1': 'value1',
-        'keys2': 'value2',
+        'keys2': 'value2'
     }
     result = requests.get(url, params=dataValues)
     printResults(result)
