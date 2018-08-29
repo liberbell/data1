@@ -17,9 +17,11 @@ def main():
     }
 
     # TODO: serialize to JSON using dumps
+    jsonStr = json.dumps(pythonData)
 
     # TODO: print the resulting JSON string
     print("JSON Data: --------")
+    print(jsonStr)
 
 
 if __name__ == "__main__":
