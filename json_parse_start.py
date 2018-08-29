@@ -25,7 +25,7 @@ def main():
         print("And it's toasted")
 
     for topping in data['toppings']:
-        print('Topping: ' + data['toppings'])
+        print('Topping: ' + topping)
 
 
 
