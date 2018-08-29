@@ -17,7 +17,7 @@ def main():
     }
 
     # TODO: serialize to JSON using dumps
-    jsonStr = json.dumps(pythonData)
+    jsonStr = json.dumps(pythonData, indent=4)
 
     # TODO: print the resulting JSON string
     print("JSON Data: --------")
