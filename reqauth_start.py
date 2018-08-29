@@ -12,7 +12,8 @@ def main():
     myCreds = HTTPBasicAuth('JoeMarini', 'MySecWord')
 
     # TODO: Issue the request with the authentication credentials
-    result = requests.get(url, auth=myCreds)
+    # result = requests.get(url, auth=myCreds)
+    result = requests.get(url, auth=('JoeMarini','MySecWord'))
 
     printResults(result)
 
