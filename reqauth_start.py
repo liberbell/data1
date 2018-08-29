@@ -9,8 +9,10 @@ def main():
     url = "http://httpbin.org/basic-auth/JoeMarini/MySecWord"
 
     # TODO: Create a credentials object using HTTPBasicAuth
+    myCreds = HTTPBasicAuth('JoeMarini', 'MySecWord')
 
     # TODO: Issue the request with the authentication credentials
+    result = requests.get(url, auth=myCreds)
 
     printResults(result)
 
