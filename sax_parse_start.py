@@ -11,13 +11,18 @@ class MyContentHandler(xml.sax.ContentHandler):
 
     #TODO: Handle startElement
 
+
     #TODO: Handle endElement
 
     #TODO: Handle text data
 
     #TODO: Handle startDocument
+    def startDocument(self):
+        print('About to start!')
 
     #TODO: Handle endDocument
+    def endDocument(self):
+        print('Finishing up!')
 
 
 def main():
