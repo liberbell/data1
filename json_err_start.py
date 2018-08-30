@@ -2,23 +2,27 @@
 
 # use the JSON module
 import json
-
+from json import JSONDecodeError
 
 def main():
     # define a string of JSON code
     jsonStr = '''{
             "sandwich" : "Reuben",
             "toasted" : true,
-            "toppings" : [
+            "toppings : [
                 "Thousand Island Dressing",
                 "Sauerkraut",
                 "Pickles"
-            ]
+            ],
             "price" : 8.99
         }'''
 
     # parse the JSON data using loads
-    data = json.loads(jsonStr)
+    try:
+        data = json.loads(jsonStr)
+    except JSONDecodeError as err:
+        print('Whoops, JSON decode error:')
+        print(err.msg)
 
     # print information from the data structure
     print("Sandwich: " + data['sandwich'])
