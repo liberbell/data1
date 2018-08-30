@@ -10,7 +10,9 @@ class MyContentHandler(xml.sax.ContentHandler):
         self.itemCount = 0
 
     #TODO: Handle startElement
-
+    def startElement(self, tagName, attrs):
+        if tagName == 'slideshow':
+            print('Slideshow title: ' + attrs['title'])
 
     #TODO: Handle endElement
 
