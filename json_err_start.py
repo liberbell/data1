@@ -23,6 +23,7 @@ def main():
     except JSONDecodeError as err:
         print('Whoops, JSON decode error:')
         print(err.msg)
+        print(err.lineno, err.colno)
 
     # print information from the data structure
     print("Sandwich: " + data['sandwich'])
