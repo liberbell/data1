@@ -28,9 +28,10 @@ def main():
     # remember that Requests auto-decodes our content
     url = "http://httpbin.org/xml"
     result = requests.get(url)
+    print(result.text)
 
     # TODO: call the parseString method on the XML text content received
-    
+
 
     # when we're done, print out some interesting results
     print("There were {0} slide elements".format(handler.slideCount))
