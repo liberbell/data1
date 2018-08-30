@@ -12,7 +12,7 @@ def main():
 
     # TODO: Use the built-in JSON function to return parsed data
     dataobj = result.json()
-    print(json.dumps(dataobj, indent=4))
+    # print(json.dumps(dataobj, indent=4))
 
     # TODO: Access data in the python object
     print(list(dataobj.keys()))
