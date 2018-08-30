@@ -15,7 +15,7 @@ def main():
     print(json.dumps(dataobj, indent=4))
 
     # TODO: Access data in the python object
-    print(list(dataobj, keys()))
+    print(list(dataobj.keys()))
 
 
 if __name__ == "__main__":
