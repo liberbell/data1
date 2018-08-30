@@ -17,6 +17,9 @@ def main():
     # TODO: Access data in the python object
     print(list(dataobj.keys()))
 
+    print('Title is: ' + dataobj['slideshow']['title'])
+    print('There are {0} slides'.format(len(dataobj['slideshow']['slides'])))
+
 
 if __name__ == "__main__":
     main()
