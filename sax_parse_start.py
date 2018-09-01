@@ -38,6 +38,7 @@ def main():
     print(result.text)
 
     # TODO: call the parseString method on the XML text content received
+    xml.sax.parseString(result.text, handler)
 
 
     # when we're done, print out some interesting results
