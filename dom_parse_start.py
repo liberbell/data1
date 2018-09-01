@@ -12,9 +12,9 @@ def main():
     # TODO: parse the returned content into a DOM structure
     domtree = xml.dom.minidom.parseString(result.text)
     rootnode = domtree.documetElement
-
     # TODO: display some information about the content
     print('The root element is {0}'.format(rootnode.nodeName))
+    print('Title: {0}'.format(rootnode.getAttribute('title')))
 
     # manipulate the XML content in memory
     # TODO: create a new item tag
