@@ -8,15 +8,28 @@ class MyContentHandler(xml.sax.ContentHandler):
     def __init__(self):
         self.slideCount = 0
         self.itemCount = 0
+        self.isInTitle = False
 
     #TODO: Handle startElement
     def startElement(self, tagName, attrs):
         if tagName == 'slideshow':
             print('Slideshow title: ' + attrs['title'])
+        elif tagName == 'slides':
+            self.slideCount += 1
+        elif tagName == 'item':
+            self.itemCount += 1
+        elif tagName == 'Title':
+            self.isInTitle = True
 
     #TODO: Handle endElement
+    def endElement(self, tagName):
+        if tagName == 'title':
+            self.isInTitle = False
 
     #TODO: Handle text data
+    def charachters(self, chars):
+        if self.isInTitle:
+            print('Title: ' + chars)
 
     #TODO: Handle startDocument
     def startDocument(self):
