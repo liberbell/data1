@@ -16,6 +16,8 @@ def main():
     print('The root element is {0}'.format(rootnode.nodeName))
     print('Title: {0}'.format(rootnode.getAttribute('title')))
 
+    items = domtree.getElementsByTagName('item')
+
     # manipulate the XML content in memory
     # TODO: create a new item tag
 
