@@ -22,6 +22,8 @@ def main():
         print(elem.tag)
 
     # TODO: Create a new slide
+    newSlide = etree.SubElement(doc, 'slide')
+    newSlide.text = 'This is a new slide'
 
     # TODO: Count the number of slides
 
