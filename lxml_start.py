@@ -14,6 +14,8 @@ def main():
     print(result.text)
 
     # TODO: Access the value of an attribute
+    print(doc.tag)
+    print(doc.attrib['title'])
 
     # TODO: Iterate over tags
 
