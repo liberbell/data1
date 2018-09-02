@@ -22,12 +22,18 @@ def main():
 
     # manipulate the XML content in memory
     # TODO: create a new item tag
+    newItem = domtree.createElement('item')
 
     # TODO: add some text to the item
+    newItem.appendChild(domtree.createTextNode('This is some text'))
 
     # TODO: now add the item to the first slide
+    firstSlide = domtree.getElementsByTagName('slide')[0]
+    firstSlide.appendChild(newItem)
 
     # TODO: Now count the item tags again
+    items = domtree.getElementsByTagName('item')
+    print('There are {0} item tags'.format(items.length))
 
 
 if __name__ == "__main__":
