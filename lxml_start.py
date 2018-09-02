@@ -18,6 +18,8 @@ def main():
     print(doc.attrib['title'])
 
     # TODO: Iterate over tags
+    for elem in doc.findall('slide'):
+        print(elem.tag)
 
     # TODO: Create a new slide
 
