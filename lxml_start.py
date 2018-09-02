@@ -10,6 +10,8 @@ def main():
     result = requests.get(url)
 
     # TODO: build a doc structure using the ElementTree API
+    doc = etree.fromstring(result.content)
+    print(result.text)
 
     # TODO: Access the value of an attribute
 
